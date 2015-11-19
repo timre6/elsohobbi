@@ -1,0 +1,251 @@
+
+<html>
+ <head>
+  <meta charset="UTF-8">
+  <title>JS Test</title>
+ </head>
+ <body>
+
+ <h1>Rózsafüzér imádság a hét minden napjára</h1>
+ forrás: <a href="http://uj.katolikus.hu/lelkiseg.php?h=14">katolikus.hu</a><p>
+ 
+ <form name="myForm">
+ Hitvallás fajtája:<p>
+  <input type="radio" name="hitvallfajta" value="apostoli" checked onchange="radioap()"> apostoli
+  <input type="radio" name="hitvallfajta" value="niceai" onchange="radioap()"> niceai
+<p>
+Megjelenítés:<p>
+  <input type="radio" name="reszletek" value="reszletes" checked onchange="radioap()"> részletes
+  <input type="radio" name="reszletek" value="egyszeru" onchange="radioap()"> egyszerű
+</form> 
+<hr>
+<p id="demo"></p>
+
+ <script type="text/javascript"> 
+ var tartalom="";
+ Render();
+ 
+ function radioap()
+ {
+	var selected = document.myForm.hitvallfajta.value;
+    //var x = document.getElementById("mySelect").value;
+    //document.getElementById("demo").innerHTML = "You selected: " + x;
+	document.getElementById("demo").innerHTML = ("You selected: " + selected);
+	//document.getElementById("demo").innerHTML = "You selected: " + selected;
+	Render();
+
+ }
+
+function ApostoliHitvall()
+{
+	var selected = document.myForm.reszletek.value;
+	if (selected=="egyszeru")
+		writem("Apostoli hitvallás<p>");
+	else
+		writem(''+
+'Hiszek egy Istenben, mindenható Atyában,<br>'+
+'mennynek és földnek Teremtőjében.<br>'+
+'És Jézus Krisztusban,<br>'+
+'az Ő egyszülött Fiában,<br>'+
+'a mi Urunkban,<br>'+
+'aki fogantatott Szentlélektől,<br>'+
+'született Szűz Máriától,<br>'+
+'szenvedett Poncius Pilátus alatt;<br>'+
+'megfeszítették, meghalt és eltemették.<br>'+
+'Alászállt a poklokra,<br>'+
+'harmadnapon feltámadt a halottak közül,<br>'+
+'fölment a mennybe,<br>'+
+'ott ül a mindenható Atyaisten jobbján,<br>'+
+'onnan jön el ítélni élőket és holtakat.<br>'+
+'Hiszek Szentlélekben.<br>'+
+'Hiszem a katolikus anyaszentegyházat,<br>'+
+'a szentek közösségét,<br>'+
+'a bűnök bocsánatát,<br>'+
+'a test feltámadását<br>'+
+'és az örök életet. Ámen<p>');
+}
+
+function NiceaiHitvall()
+{
+	var selected = document.myForm.reszletek.value;
+	if (selected=="egyszeru")
+		writem("Niceai hitvallás<p>");
+	else
+		writem(''+
+'Hiszek az egy Istenben, mindenható Atyában,<br>'+
+'mennynek és földnek, minden láthatónak és láthatatlannak Teremtőjében.<br>'+
+'Hiszek az egy Úrban, Jézus Krisztusban, Isten egyszülött Fiában,<br>'+
+'aki az Atyától született az idő kezdete előtt. <br>'+
+'Isten az Istentől, világosság a világosságtól,<br>'+
+'valóságos Isten a valóságos Istentől.<br>'+
+'Született, de nem teremtmény,<br>'+
+'az Atyával egylényegű és minden általa lett.<br>'+
+'Értünk emberekért, a mi üdvösségünkért, leszállott a mennyből.<br>'+
+'Megtestesült a Szentlélek erejéből Szűz Máriától<br>'+
+'és emberré lett.<br>'+
+'Poncius Pilátus alatt értünk keresztre feszítették, <br>'+
+'kínhalált szenvedett és eltemették.<br>'+
+'Harmadnapra föltámadott az Írások szerint,<br>'+
+'fölment a mennybe, ott ül az Atyának jobbján,<br>'+
+'de újra eljön dicsőségben ítélni élőket és holtakat<br>'+
+'és országának nem lesz vége.<br>'+
+'Hiszek a Szentlélekben, Urunkban és éltetőnkben,<br>'+
+'aki az Atyától és Fiútól származik,<br>'+
+'akit éppúgy imádunk és dicsőítünk<br>'+
+'mint az Atyát és a Fiút,<br>'+
+'Ő szólt a próféták szavával.<br>'+
+'Hiszek az egy, szent, katolikus és apostoli Anyaszentegyházban.<br>'+
+'Vallom az egy keresztséget a bűnök bocsánatára.<br>'+
+'Várom a holtak föltámadását<br>'+
+'és az eljövendő örök életet. Ámen.<p>');
+}
+
+function teszt()
+{
+	writem('Árvíztűrő');
+}
+
+function Keresztvet()
+{
+	writem('Keresztvetés<p>');
+}
+
+function Miaty()
+{
+	var selected = document.myForm.reszletek.value;
+	if (selected=="egyszeru")
+		writem("Miatyánk<p>");
+	else
+		writem(''+
+'Mi Atyánk, aki a mennyekben vagy,<br>'+
+'Szenteltessék meg a Te neved,<br>'+
+'Jöjjön el a Te országod,<br>'+
+'Legyen meg a Te akaratod,<br>'+
+'Amint a mennyben, úgy a földön is.<br>'+
+'Mindennapi kenyerünket<br>'+
+'add meg nekünk ma,<br>'+
+'És bocsásd meg vétkeinket,<br>'+
+'Miképpen mi is megbocsátunk<br>'+
+'az ellenünk vétkezőknek,<br>'+
+'És ne vígy minket kísértésbe,<br>'+
+'De szabadíts meg a gonosztól.<p>'
+	);
+}
+
+function Udv(titok)
+{
+	var selected = document.myForm.reszletek.value;
+	if (selected=="egyszeru")
+		writem("Üdvözlégy a következő titokkal: \""+titok+"\"<p>");
+	else
+		writem(''+
+		'Üdvözlégy Mária, kegyelemmel teljes, az Úr van teveled, áldott vagy te az asszonyok között, és áldott a te méhednek gyümölcse, Jézus, '+
+		titok+
+		'. Asszonyunk, Szűz Mária, Istennek szent Anyja, imádkozzál érettünk, bűnösökért, most és halálunk óráján. Ámen<p>');
+}
+
+function KisDox()
+{
+	var selected = document.myForm.reszletek.value;
+	if (selected=="egyszeru")
+		writem("Dicsőség<p>");
+	else
+		writem('Dicsőség az Atyának, a Fiúnak és a Szentléleknek, miképpen kezdetben, most és mindörökké. Ámen.<p>');
+}
+
+function Tized(titok)
+{
+	var selected = document.myForm.reszletek.value;
+	if (selected=="egyszeru")
+		writem("10 x Üdvözlégy a következő titokkal: \""+titok+"\"<p>");
+	else
+	for (i=0; i<10; ++i)
+		Udv(titok);
+}
+
+function Rozsaf(fajta)
+{
+	writem(": "+fajta+"<p>")
+	var tk={bevezre: "", tizedre: ""};
+	if (fajta=="Örvendetes")
+	{
+		tk.bevezre=["aki hitünket növelje", "aki reményünket erősítse", "aki szeretetünket tökéletesítse"];
+		tk.tizedre=["akit te, Szent Szűz, Szentlélektől fogantál", 
+			"akit te, Szent Szűz, Erzsébetet látogatván hordoztál",
+			"akit te, Szent Szűz, a világra szültél",
+			"akit te, Szent Szűz, a templomban bemutattál",
+			"akit te, Szent Szűz, a templomban megtaláltál"];
+	}
+	else if (fajta=="Fájdalmas")
+	{
+		tk.bevezre=["aki értelmünket megvilágosítsa", "aki emlékezetünket megerősítse", "aki akaratunkat tökéletesítse"];
+		tk.tizedre=["aki érettünk vérrel verejtékezett", 
+			"akit érettünk megostoroztak",
+			"akit érettünk tövissel koronáztak,",
+			"aki érettünk a nehéz keresztet hordozta",
+			"akit érettünk keresztre feszítettek,"];
+	}
+	else if (fajta=="Dicsőséges")
+	{
+		tk.bevezre=["aki gondolatainkat irányítsa", "aki szavainkat vezérelje", "aki cselekedeteinket kormányozza"];
+		tk.tizedre=["aki a halálból feltámadt", 
+			"aki a mennybe felment",
+			"aki nekünk a Szentlelket elküldte",
+			"aki téged, Szent Szűz, a mennybe fölvett",
+			"aki téged, Szent Szűz, a mennyben megkoronázott"];
+	}
+	else if (fajta=="Világossag")
+	{
+		tk.bevezre=["aki megtisztítson minket", "aki lelkünk békéjét megőrizze", "aki a Szentségekben megerősítsen"];
+		tk.tizedre=["aki a Jordán vizében megkeresztelkedett", 
+			"aki a kánai menyegzőn kinyilvánította isteni erejét",
+			"aki meghirdette Isten országát",
+			"aki a Tábor hegyén megmutatta isteni dicsőségét",
+			"aki az Eucharisztiában nekünk adta önmagát"];
+	}
+
+	Keresztvet();
+	//ApostoliHitvall();
+	var selected = document.myForm.hitvallfajta.value;
+	if (selected=="apostoli")
+		ApostoliHitvall();
+	else
+		NiceaiHitvall();
+	
+	Miaty();
+	for (i=0; i<3; ++i)
+		Udv(tk.bevezre[i]);
+	KisDox();
+	for (tized=0; tized<5; ++tized)
+	{
+		Miaty();
+		Tized(tk.tizedre[tized]);
+		KisDox();
+	}
+	Keresztvet();
+}
+
+function writem(szoveg)
+{
+	//document.getElementById("demo").innerHTML+=(szoveg);
+	tartalom+=(szoveg);
+}
+
+function Render()
+{
+	document.getElementById("demo").innerHTML="";
+	tartalom="";
+	writem( "Hétfő"); Rozsaf("Örvendetes"); writem("<hr>");
+	writem( "Kedd"); Rozsaf("Fájdalmas"); writem("<hr>");
+	writem( "Szerda"); Rozsaf("Dicsőséges"); writem("<hr>");
+	writem( "Csütörtök"); Rozsaf("Világossag"); writem("<hr>");
+	writem( "Péntek"); Rozsaf("Fájdalmas"); writem("<hr>");
+	writem( "Szombat"); Rozsaf("Örvendetes"); writem("<hr>");
+	writem( "Vasárnap"); Rozsaf("Dicsőséges");
+	document.getElementById("demo").innerHTML=tartalom;
+}
+
+ 
+</script>
+ </body>
+</html>
