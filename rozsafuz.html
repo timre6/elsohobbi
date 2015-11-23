@@ -1,40 +1,35 @@
-
 <html>
- <head>
-  <meta charset="UTF-8">
-  <title>JS Test</title>
- </head>
- <body>
-
- <h1>Rózsafüzér imádság a hét minden napjára</h1>
- forrás: <a href="http://uj.katolikus.hu/lelkiseg.php?h=14">katolikus.hu</a><p>
+	<head>
+  		<meta charset="UTF-8">
+		<title>JS Test</title>
+	</head>
+	<body>
+		<h1>Rózsafüzér imádság a hét minden napjára</h1>
+ 		forrás: <a href="http://uj.katolikus.hu/lelkiseg.php?h=14">katolikus.hu</a><p>
  
- <form name="myForm">
- Hitvallás fajtája:<p>
-  <input type="radio" name="hitvallfajta" value="apostoli" checked onchange="radioap()"> apostoli
-  <input type="radio" name="hitvallfajta" value="niceai" onchange="radioap()"> niceai
-<p>
-Megjelenítés:<p>
-  <input type="radio" name="reszletek" value="reszletes" checked onchange="radioap()"> részletes
-  <input type="radio" name="reszletek" value="egyszeru" onchange="radioap()"> egyszerű
-</form> 
-<hr>
-<p id="demo"></p>
+ 		<form name="myForm">
+			Hitvallás fajtája:<p>
+			<input type="radio" name="hitvallfajta" value="apostoli" checked onchange="radioap()"> apostoli
+			<input type="radio" name="hitvallfajta" value="niceai" onchange="radioap()"> niceai
+			<p>
+			Megjelenítés:<p>
+			<input type="radio" name="reszletek" value="reszletes" checked onchange="radioap()"> részletes
+			<input type="radio" name="reszletek" value="egyszeru" onchange="radioap()"> egyszerű
+		</form> 
+		<hr>
+		<p id="demo"></p>
 
- <script type="text/javascript"> 
- var tartalom="";
- Render();
+<script type="text/javascript"> 
+
+var tartalom="";
+Render();
  
- function radioap()
- {
+function radioap()
+{
 	var selected = document.myForm.hitvallfajta.value;
-    //var x = document.getElementById("mySelect").value;
-    //document.getElementById("demo").innerHTML = "You selected: " + x;
 	document.getElementById("demo").innerHTML = ("You selected: " + selected);
-	//document.getElementById("demo").innerHTML = "You selected: " + selected;
 	Render();
-	//belediszno
- }
+}
 
 function ApostoliHitvall()
 {
@@ -247,5 +242,5 @@ function Render()
 
  
 </script>
- </body>
+	</body>
 </html>
