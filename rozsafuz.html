@@ -1,23 +1,24 @@
 <html>
-	<head>
-  		<meta charset="UTF-8">
-		<title>JS Test</title>
-	</head>
-	<body>
-		<h1>Rózsafüzér imádság a hét minden napjára</h1>
- 		forrás: <a href="http://uj.katolikus.hu/lelkiseg.php?h=14">katolikus.hu</a><p>
+    <head>
+        <meta charset="UTF-8">
+        
+        <title>JS Test</title>
+    </head>
+    <body>
+        <h1>Rózsafüzér imádság a hét minden napjára</h1>
+         forrás: <a href="http://uj.katolikus.hu/lelkiseg.php?h=14">katolikus.hu</a><p>
  
- 		<form name="myForm">
-			Hitvallás fajtája:<p>
-			<input type="radio" name="hitvallfajta" value="apostoli" checked onchange="radioap()"> apostoli
-			<input type="radio" name="hitvallfajta" value="niceai" onchange="radioap()"> niceai
-			<p>
-			Megjelenítés:<p>
-			<input type="radio" name="reszletek" value="reszletes" checked onchange="radioap()"> részletes
-			<input type="radio" name="reszletek" value="egyszeru" onchange="radioap()"> egyszerű
-		</form> 
-		<hr>
-		<p id="demo"></p>
+         <form name="myForm">
+            Hitvallás fajtája:<p>
+            <input type="radio" name="hitvallfajta" value="apostoli" checked onchange="radioap()"> apostoli
+            <input type="radio" name="hitvallfajta" value="niceai" onchange="radioap()"> niceai
+            <p>
+            Megjelenítés:<p>
+            <input type="radio" name="reszletek" value="reszletes" checked onchange="radioap()"> részletes
+            <input type="radio" name="reszletek" value="egyszeru" onchange="radioap()"> egyszerű
+        </form> 
+        <hr>
+        <p id="demo"></p>
 
 <script type="text/javascript"> 
 
@@ -26,18 +27,18 @@ Render();
  
 function radioap()
 {
-	var selected = document.myForm.hitvallfajta.value;
-	document.getElementById("demo").innerHTML = ("You selected: " + selected);
-	Render();
+    var selected = document.myForm.hitvallfajta.value;
+    document.getElementById("demo").innerHTML = ("You selected: " + selected);
+    Render();
 }
 
 function ApostoliHitvall()
 {
-	var selected = document.myForm.reszletek.value;
-	if (selected=="egyszeru")
-		writem("Apostoli hitvallás<p>");
-	else
-		writem(''+
+    var selected = document.myForm.reszletek.value;
+    if (selected=="egyszeru")
+        writem("Apostoli hitvallás<p>");
+    else
+        writem(''+
 'Hiszek egy Istenben, mindenható Atyában,<br>'+
 'mennynek és földnek Teremtőjében.<br>'+
 'És Jézus Krisztusban,<br>'+
@@ -62,11 +63,11 @@ function ApostoliHitvall()
 
 function NiceaiHitvall()
 {
-	var selected = document.myForm.reszletek.value;
-	if (selected=="egyszeru")
-		writem("Niceai hitvallás<p>");
-	else
-		writem(''+
+    var selected = document.myForm.reszletek.value;
+    if (selected=="egyszeru")
+        writem("Niceai hitvallás<p>");
+    else
+        writem(''+
 'Hiszek az egy Istenben, mindenható Atyában,<br>'+
 'mennynek és földnek, minden láthatónak és láthatatlannak Teremtőjében.<br>'+
 'Hiszek az egy Úrban, Jézus Krisztusban, Isten egyszülött Fiában,<br>'+
@@ -97,21 +98,21 @@ function NiceaiHitvall()
 
 function teszt()
 {
-	writem('Árvíztűrő');
+    writem('Árvíztűrő');
 }
 
 function Keresztvet()
 {
-	writem('Keresztvetés<p>');
+    writem('Keresztvetés<p>');
 }
 
 function Miaty()
 {
-	var selected = document.myForm.reszletek.value;
-	if (selected=="egyszeru")
-		writem("Miatyánk<p>");
-	else
-		writem(''+
+    var selected = document.myForm.reszletek.value;
+    if (selected=="egyszeru")
+        writem("Miatyánk<p>");
+    else
+        writem(''+
 'Mi Atyánk, aki a mennyekben vagy,<br>'+
 'Szenteltessék meg a Te neved,<br>'+
 'Jöjjön el a Te országod,<br>'+
@@ -124,124 +125,124 @@ function Miaty()
 'az ellenünk vétkezőknek,<br>'+
 'És ne vígy minket kísértésbe,<br>'+
 'De szabadíts meg a gonosztól.<p>'
-	);
+    );
 }
 
 function Udv(titok)
 {
-	var selected = document.myForm.reszletek.value;
-	if (selected=="egyszeru")
-		writem("Üdvözlégy a következő titokkal: \""+titok+"\"<p>");
-	else
-		writem(''+
-		'Üdvözlégy Mária, kegyelemmel teljes, az Úr van teveled, áldott vagy te az asszonyok között, és áldott a te méhednek gyümölcse, Jézus, '+
-		titok+
-		'. Asszonyunk, Szűz Mária, Istennek szent Anyja, imádkozzál érettünk, bűnösökért, most és halálunk óráján. Ámen<p>');
+    var selected = document.myForm.reszletek.value;
+    if (selected=="egyszeru")
+        writem("Üdvözlégy a következő titokkal: \""+titok+"\"<p>");
+    else
+        writem(''+
+        'Üdvözlégy Mária, kegyelemmel teljes, az Úr van teveled, áldott vagy te az asszonyok között, és áldott a te méhednek gyümölcse, Jézus, '+
+        titok+
+        '. Asszonyunk, Szűz Mária, Istennek szent Anyja, imádkozzál érettünk, bűnösökért, most és halálunk óráján. Ámen<p>');
 }
 
 function KisDox()
 {
-	var selected = document.myForm.reszletek.value;
-	if (selected=="egyszeru")
-		writem("Dicsőség<p>");
-	else
-		writem('Dicsőség az Atyának, a Fiúnak és a Szentléleknek, miképpen kezdetben, most és mindörökké. Ámen.<p>');
+    var selected = document.myForm.reszletek.value;
+    if (selected=="egyszeru")
+        writem("Dicsőség<p>");
+    else
+        writem('Dicsőség az Atyának, a Fiúnak és a Szentléleknek, miképpen kezdetben, most és mindörökké. Ámen.<p>');
 }
 
 function Tized(titok)
 {
-	var selected = document.myForm.reszletek.value;
-	if (selected=="egyszeru")
-		writem("10 x Üdvözlégy a következő titokkal: \""+titok+"\"<p>");
-	else
-	for (i=0; i<10; ++i)
-		Udv(titok);
+    var selected = document.myForm.reszletek.value;
+    if (selected=="egyszeru")
+        writem("10 x Üdvözlégy a következő titokkal: \""+titok+"\"<p>");
+    else
+    for (i=0; i<10; ++i)
+        Udv(titok);
 }
 
 function Rozsaf(fajta)
 {
-	writem(": "+fajta+"<p>")
-	var tk={bevezre: "", tizedre: ""};
-	if (fajta=="Örvendetes")
-	{
-		tk.bevezre=["aki hitünket növelje", "aki reményünket erősítse", "aki szeretetünket tökéletesítse"];
-		tk.tizedre=["akit te, Szent Szűz, Szentlélektől fogantál", 
-			"akit te, Szent Szűz, Erzsébetet látogatván hordoztál",
-			"akit te, Szent Szűz, a világra szültél",
-			"akit te, Szent Szűz, a templomban bemutattál",
-			"akit te, Szent Szűz, a templomban megtaláltál"];
-	}
-	else if (fajta=="Fájdalmas")
-	{
-		tk.bevezre=["aki értelmünket megvilágosítsa", "aki emlékezetünket megerősítse", "aki akaratunkat tökéletesítse"];
-		tk.tizedre=["aki érettünk vérrel verejtékezett", 
-			"akit érettünk megostoroztak",
-			"akit érettünk tövissel koronáztak,",
-			"aki érettünk a nehéz keresztet hordozta",
-			"akit érettünk keresztre feszítettek,"];
-	}
-	else if (fajta=="Dicsőséges")
-	{
-		tk.bevezre=["aki gondolatainkat irányítsa", "aki szavainkat vezérelje", "aki cselekedeteinket kormányozza"];
-		tk.tizedre=["aki a halálból feltámadt", 
-			"aki a mennybe felment",
-			"aki nekünk a Szentlelket elküldte",
-			"aki téged, Szent Szűz, a mennybe fölvett",
-			"aki téged, Szent Szűz, a mennyben megkoronázott"];
-	}
-	else if (fajta=="Világossag")
-	{
-		tk.bevezre=["aki megtisztítson minket", "aki lelkünk békéjét megőrizze", "aki a Szentségekben megerősítsen"];
-		tk.tizedre=["aki a Jordán vizében megkeresztelkedett", 
-			"aki a kánai menyegzőn kinyilvánította isteni erejét",
-			"aki meghirdette Isten országát",
-			"aki a Tábor hegyén megmutatta isteni dicsőségét",
-			"aki az Eucharisztiában nekünk adta önmagát"];
-	}
+    writem(": "+fajta+"<p>")
+    var tk={bevezre: "", tizedre: ""};
+    if (fajta=="Örvendetes")
+    {
+        tk.bevezre=["aki hitünket növelje", "aki reményünket erősítse", "aki szeretetünket tökéletesítse"];
+        tk.tizedre=["akit te, Szent Szűz, Szentlélektől fogantál", 
+            "akit te, Szent Szűz, Erzsébetet látogatván hordoztál",
+            "akit te, Szent Szűz, a világra szültél",
+            "akit te, Szent Szűz, a templomban bemutattál",
+            "akit te, Szent Szűz, a templomban megtaláltál"];
+    }
+    else if (fajta=="Fájdalmas")
+    {
+        tk.bevezre=["aki értelmünket megvilágosítsa", "aki emlékezetünket megerősítse", "aki akaratunkat tökéletesítse"];
+        tk.tizedre=["aki érettünk vérrel verejtékezett", 
+            "akit érettünk megostoroztak",
+            "akit érettünk tövissel koronáztak,",
+            "aki érettünk a nehéz keresztet hordozta",
+            "akit érettünk keresztre feszítettek,"];
+    }
+    else if (fajta=="Dicsőséges")
+    {
+        tk.bevezre=["aki gondolatainkat irányítsa", "aki szavainkat vezérelje", "aki cselekedeteinket kormányozza"];
+        tk.tizedre=["aki a halálból feltámadt", 
+            "aki a mennybe felment",
+            "aki nekünk a Szentlelket elküldte",
+            "aki téged, Szent Szűz, a mennybe fölvett",
+            "aki téged, Szent Szűz, a mennyben megkoronázott"];
+    }
+    else if (fajta=="Világossag")
+    {
+        tk.bevezre=["aki megtisztítson minket", "aki lelkünk békéjét megőrizze", "aki a Szentségekben megerősítsen"];
+        tk.tizedre=["aki a Jordán vizében megkeresztelkedett", 
+            "aki a kánai menyegzőn kinyilvánította isteni erejét",
+            "aki meghirdette Isten országát",
+            "aki a Tábor hegyén megmutatta isteni dicsőségét",
+            "aki az Eucharisztiában nekünk adta önmagát"];
+    }
 
-	Keresztvet();
-	//ApostoliHitvall();
-	var selected = document.myForm.hitvallfajta.value;
-	if (selected=="apostoli")
-		ApostoliHitvall();
-	else
-		NiceaiHitvall();
-	
-	Miaty();
-	for (i=0; i<3; ++i)
-		Udv(tk.bevezre[i]);
-	KisDox();
-	for (tized=0; tized<5; ++tized)
-	{
-		Miaty();
-		Tized(tk.tizedre[tized]);
-		KisDox();
-	}
-	Keresztvet();
+    Keresztvet();
+    //ApostoliHitvall();
+    var selected = document.myForm.hitvallfajta.value;
+    if (selected=="apostoli")
+        ApostoliHitvall();
+    else
+        NiceaiHitvall();
+    
+    Miaty();
+    for (i=0; i<3; ++i)
+        Udv(tk.bevezre[i]);
+    KisDox();
+    for (tized=0; tized<5; ++tized)
+    {
+        Miaty();
+        Tized(tk.tizedre[tized]);
+        KisDox();
+    }
+    Keresztvet();
 }
 
 function writem(szoveg)
 {
-	//document.getElementById("demo").innerHTML+=(szoveg);
-	tartalom+=(szoveg);
+    //document.getElementById("demo").innerHTML+=(szoveg);
+    tartalom+=(szoveg);
 }
 
 function Render()
 {
-	document.getElementById("demo").innerHTML="";
-	tartalom="";
-	writem( "Hétfő"); Rozsaf("Örvendetes"); writem("<hr>");
-	writem( "Kedd"); Rozsaf("Fájdalmas"); writem("<hr>");
-	writem( "Szerda"); Rozsaf("Dicsőséges"); writem("<hr>");
-	writem( "Csütörtök"); Rozsaf("Világossag"); writem("<hr>");
-	writem( "Péntek"); Rozsaf("Fájdalmas"); writem("<hr>");
-	writem( "Szombat"); Rozsaf("Örvendetes"); writem("<hr>");
-	writem( "Vasárnap"); Rozsaf("Dicsőséges");
-	document.getElementById("demo").innerHTML=tartalom;
+    document.getElementById("demo").innerHTML="";
+    tartalom="";
+    writem( "Hétfő"); Rozsaf("Örvendetes"); writem("<hr>");
+    writem( "Kedd"); Rozsaf("Fájdalmas"); writem("<hr>");
+    writem( "Szerda"); Rozsaf("Dicsőséges"); writem("<hr>");
+    writem( "Csütörtök"); Rozsaf("Világossag"); writem("<hr>");
+    writem( "Péntek"); Rozsaf("Fájdalmas"); writem("<hr>");
+    writem( "Szombat"); Rozsaf("Örvendetes"); writem("<hr>");
+    writem( "Vasárnap"); Rozsaf("Dicsőséges");
+    document.getElementById("demo").innerHTML=tartalom;
 }
 
  
 </script>
-	</body>
+    </body>
 </html>
 
